@@ -8,7 +8,9 @@
     "dev": "bun run --watch ./index.ts"
   },
   "dependencies": {
+    "@orpc/pino": "^2.0.0-beta.49",
     "@orpc/server": "^2.0.0-beta.49",
+    "pino": "^10.4.0",
     "zod": "^4.6.7"
   },
   "devDependencies": {

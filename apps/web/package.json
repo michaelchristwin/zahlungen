@@ -1,5 +1,5 @@
 {
-  "name": "@zahlungen/web",
+  "name": "web",
   "private": true,
   "type": "module",
   "imports": {
@@ -24,7 +24,9 @@
     "@zahlungen/api": "workspace:*",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
-    "tailwindcss": "^4.1.18"
+    "tailwindcss": "^4.1.18",
+    "@tanstack/react-query": "5.107.1",
+    "@tanstack/react-query-devtools": "5.107.1"
   },
   "devDependencies": {
     "@tanstack/devtools-vite": "0.8.6",

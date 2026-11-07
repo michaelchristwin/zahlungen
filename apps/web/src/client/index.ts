@@ -4,7 +4,7 @@ import { RPCLink } from '@orpc/client/fetch'
 import type { router } from '@zahlungen/api/router'
 
 const link = new RPCLink({
-  origin: '',
+  origin: 'http://localhost:8080',
   url: '/rpc',
   headers: { authorization: 'bearer token' },
   interceptors: [
