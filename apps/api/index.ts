@@ -2,9 +2,14 @@ import { RPCHandler } from "@orpc/server/fetch";
 import { CORSHandlerPlugin } from "@orpc/server/plugins";
 import { onError } from "@orpc/server";
 import { router } from "./router";
+import { env } from "./config/env";
 
 const handler = new RPCHandler(router, {
-  plugins: [new CORSHandlerPlugin()],
+  plugins: [
+    new CORSHandlerPlugin({
+      exposeHeaders: ["Content-Disposition", "Standard-Server"],
+    }),
+  ],
   interceptors: [
     onError((error) => {
       console.error(error);
@@ -27,4 +32,5 @@ export async function fetch(request: Request): Promise<Response> {
 
 Bun.serve({
   fetch,
+  port: env.PORT,
 });
